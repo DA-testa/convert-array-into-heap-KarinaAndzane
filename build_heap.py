@@ -14,6 +14,7 @@ def build_heap(data):
          def swap(i):
             while i!=1:
                 node=i
+                count=0
                 if data[i]<data[int(i/2)]:
                     data[i]=data[int(i/2)]
                     data[int(i/2)]=node
