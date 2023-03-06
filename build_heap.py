@@ -23,7 +23,9 @@ def main():
          data = list(map(int, input().split()))
     if "F" in mode:
         filename=input()
-        data =list(map(int, input().split()))
+                with open ("./test/"+filename, mode ='r') as fails:
+                 n=int(fails.readline())
+                 data=list(map(int,fails.readline().split()))
     # checks if lenght of data is the same as the said lenght
     assert len(data) == n
 
