@@ -16,7 +16,7 @@ def build_heap(data):
             data[i]=data[int(i/2)]
             data[int(i/2)]=node
             count=count+1
-            swap.append(data[i], data[int(i/2)])
+            swaps.append(data[i], data[int(i/2)])
     
     return swaps,count
 
