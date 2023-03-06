@@ -21,10 +21,14 @@ def build_heap(data):
                 swaps.append((data[i], data[i//2]))
             else:
                 break
+                
+                
             swap(i//2)
-      for i in range(len(data)-1,- 1,-1):
+            
+    for i in range(len(data)-1,- 1,-1):
         swap(i)   
          # swaps.append((data[i], data[i(i/2)]))
+            
     return swaps,count
 
 
