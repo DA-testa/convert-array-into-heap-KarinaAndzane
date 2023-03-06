@@ -61,7 +61,7 @@ def main():
 
     # output all swaps
     print(len(swaps))
-    for i, j in swaps:
+    for i in swaps:
         print(i)
 
 
