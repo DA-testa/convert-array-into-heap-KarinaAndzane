@@ -3,6 +3,7 @@
 
 def build_heap(data):
     swaps = []
+    count = 0 
     # TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
 
@@ -15,12 +16,14 @@ def main():
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
-
-
+    mode = input()
+    if "I" in mode:
     # input from keyboard
-    n = int(input())
-    data = list(map(int, input().split()))
-
+         n = int(input())
+         data = list(map(int, input().split()))
+    if "F" in mode:
+        filename=input()
+        data =list(map(int, input().split()))
     # checks if lenght of data is the same as the said lenght
     assert len(data) == n
 
@@ -29,6 +32,7 @@ def main():
     swaps = build_heap(data)
 
     # TODO: output how many swaps were made, 
+    print(count)
     # this number should be less than 4n (less than 4*len(data))
 
 
