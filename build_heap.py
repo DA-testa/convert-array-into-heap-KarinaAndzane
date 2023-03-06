@@ -10,20 +10,21 @@ def build_heap(data):
     for i in (data):
         array.append(i)
 
-    for i in range(len(data)-1,-1,-1):
-        swap(i)
-        def swap(i):
-            while i!=1:
-                node=i
-                count=0
-                if data[i]<data[int(i/2)]:
-                    data[i]=data[int(i/2)]
-                    data[int(i/2)]=node
-                    count=count+1
-                    swaps.append((data[i], data[int(i/2)]))
-            return swap(int(i/2))
-        
-         # swaps.append((data[i], data[int(i/2)]))
+    def swap(i):
+        count=0
+        while i!=1:
+            node=i
+            if data[i]<data[i//2]:
+                data[i]=data[i//2]
+                data[i//2]=node
+                count=count+1
+                swaps.append((data[i], data[i//2]))
+            else:
+                break
+            swap(i//2)
+      for i in range(len(data)-1,- 1,-1):
+        swap(i)   
+         # swaps.append((data[i], data[i(i/2)]))
     return swaps,count
 
 
