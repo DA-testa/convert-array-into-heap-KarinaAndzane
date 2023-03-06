@@ -12,11 +12,11 @@ def build_heap(data):
 
     for i in range(len(data)-1,-1,-1):
         node=i
-        if data[i]<data[i/2]:
-            data[i]=data[i/2]
-            data[i/2]=node
+        if data[i]<data[int(i/2)]:
+            data[i]=data[int(i/2)]
+            data[int(i/2)]=node
             count=count+1
-            swap.append(data[i], data[i/2])
+            swap.append(data[i], data[int(i/2)])
     
     return swaps,count
 
@@ -48,7 +48,7 @@ def main():
     swaps = build_heap(data)
 
     # TODO: output how many swaps were made, 
-    print(count)
+    # print(len(swaps))
     # this number should be less than 4n (less than 4*len(data))
 
 
