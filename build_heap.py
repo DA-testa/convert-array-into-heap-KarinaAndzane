@@ -37,8 +37,8 @@ def main():
     if "F" in mode:
         filename=input()
         with open ("./test/"+filename, mode ='r') as fails:
-        n=int(fails.readline())
-        data=(list(map(int,fails.readline().split())))
+            n=int(fails.readline())
+            data=(list(map(int,fails.readline().split())))
                     
     # checks if lenght of data is the same as the said lenght
     assert len(data) == n
