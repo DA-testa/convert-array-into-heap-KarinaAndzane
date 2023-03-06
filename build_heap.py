@@ -6,9 +6,21 @@ def build_heap(data):
     count = 0 
     # TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
+    array = [0]
+    for i in (data):
+        array.append(i)
+
+    for i in range(len(data)-1,-1,-1):
+        node=i
+        if data[i]<data[i/2]:
+            data[i]=data[i/2]
+            data[i/2]=node
+            count=count+1
+            swap.append(data[i], data[i/2])
+    
+    return swaps,count
 
 
-    return swaps
 
 
 def main():
@@ -25,7 +37,10 @@ def main():
         filename=input()
                 with open ("./test/"+filename, mode ='r') as fails:
                  n=int(fails.readline())
-                 data=list(map(int,fails.readline().split()))
+                 
+
+                 data=(list(map(int,fails.readline().split())))
+                    
     # checks if lenght of data is the same as the said lenght
     assert len(data) == n
 
