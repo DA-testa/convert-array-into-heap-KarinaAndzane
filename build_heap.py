@@ -6,24 +6,21 @@ def build_heap(data):
     count = 0 
     # TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
-    array = [0]
-    for i in (data):
-        array.append(i)
-
+   
     def swap(i):
-        count=0
-        while i!=1:
-            node=i
-            if data[i]<data[i//2]:
-                data[i]=data[i//2]
-                data[i//2]=node
+        nonlocal count
+        while i!=0:
+            
+            if data[i]<data[int((i-1)/2)]:
+                data[i]=data[int((i-1)/2)]
+                data[i],data[int((i-1)/2)]=data[int((i-1)/2)],data[i]
                 count=count+1
-                swaps.append((data[i], data[i//2]))
+                swaps.append(( data[int((i-1)/2)], data[i]))
             else:
                 break
                 
-                
-            swap(i//2)
+            i = int((i-1)/2)
+            swap(i)
             
     for i in range(len(data)-1,- 1,-1):
         swap(i)   
@@ -65,7 +62,7 @@ def main():
     # output all swaps
     print(len(swaps))
     for i, j in swaps:
-        print(i, j)
+        print(i)
 
 
 if __name__ == "__main__":
