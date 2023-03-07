@@ -40,12 +40,16 @@ def main():
     # input from keyboard
          n = int(input())
          data = list(map(int, input().split()))
+    else:
+        print("error")
             
     if "F" in mode:
         filename=input()
-        with open ("./test/"+filename, mode ='r') as fails:
+        with open ("tests/"+filename, mode ='r') as fails:
             n=int(fails.readline())
             data=(list(map(int,fails.readline().split())))
+    else:
+        print("error")
                     
     # checks if lenght of data is the same as the said lenght
     assert len(data) == n
