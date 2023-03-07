@@ -40,14 +40,13 @@ def main():
     # input from keyboard
          n = int(input())
          data = list(map(int, input().split()))
-    else:
-        print("error")
-            
-    if "F" in mode:
+    elif "F" in mode:
         filename=input()
-        with open ("tests/"+filename, mode ='r') as fails:
-            n=int(fails.readline())
-            data=(list(map(int,fails.readline().split())))
+        if 'a' not in filename:
+            
+            with open ("tests/"+filename, mode ='r') as fails:
+                n=int(fails.readLine())
+                data=(list(map(int,fails.read().split())))
     else:
         print("error")
                     
