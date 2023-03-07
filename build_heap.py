@@ -45,8 +45,8 @@ def main():
         if 'a' not in filename:
             
             with open ("./tests/"+filename, mode ='r') as fails:
-                n=int(fails.readLine())
-                data=(list(map(int,fails.readLine().split())))
+                n=int(fails.readline())
+                data=(list(map(int,fails.readline().split())))
     else:
         print("error")
                     
