@@ -8,7 +8,7 @@ def build_heap(data):
     # try to achieve  O(n) and not O(n2)
    
     def swap(i):
-        nonlocal count
+        
         while i!=0:
             
             if data[i]<data[int((i-1)/2)]:
