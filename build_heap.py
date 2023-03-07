@@ -14,7 +14,7 @@ def build_heap(data):
             if data[i]<data[int((i-1)/2)]:
                 data[i]=data[int((i-1)/2)]
                 data[i],data[int((i-1)/2)]=data[int((i-1)/2)],data[i]
-                count=count+1
+               
                 swaps.append(( data[int((i-1)/2)], data[i]))
             else:
                 break
@@ -26,7 +26,7 @@ def build_heap(data):
         swap(i)   
          # swaps.append((data[i], data[i(i/2)]))
             
-    return swaps,count
+    return swaps
 
 
 
@@ -61,8 +61,8 @@ def main():
 
     # output all swaps
     print(len(swaps))
-    for i in swaps:
-        print(i)
+    for i,j in swaps:
+        print(i,j)
 
 
 if __name__ == "__main__":
