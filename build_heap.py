@@ -3,7 +3,7 @@
 
 def build_heap(data):
     swaps = []
-    count = 0 
+  
     # TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
    
@@ -12,7 +12,7 @@ def build_heap(data):
         while i!=0:
             
             if data[i]<data[int((i-1)/2)]:
-                data[i]=data[int((i-1)/2)]
+                
                 data[i],data[int((i-1)/2)]=data[int((i-1)/2)],data[i]
                
                 swaps.append(( data[int((i-1)/2)], data[i]))
