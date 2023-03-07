@@ -15,7 +15,7 @@ def build_heap(data):
                 
                 data[i],data[int((i-1)/2)]=data[int((i-1)/2)],data[i]
                
-                swaps.append((int((i-1)/2), i)
+                swaps.append((int((i-1)/2), i))
             else:
                 break
                 
