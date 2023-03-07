@@ -46,7 +46,7 @@ def main():
             
             with open ("./tests/"+filename, mode ='r') as fails:
                 n=int(fails.readLine())
-                data=(list(map(int,fails.read().split())))
+                data=(list(map(int,fails.readLine().split())))
     else:
         print("error")
                     
